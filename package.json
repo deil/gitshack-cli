@@ -1,0 +1,18 @@
+{
+  "name": "gitshack-cli",
+  "version": "0.1.0",
+  "description": "A small self-hosted GitLab CLI for repositories and merge requests, inspired by GitHub CLI.",
+  "type": "module",
+  "bin": { "gs-gitlab": "dist/index.js" },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": { "commander": "^12.1.0" },
+  "devDependencies": { "@types/node": "^22.10.2", "tsx": "^4.19.2", "typescript": "^5.7.2" },
+  "engines": { "node": ">=20" }
+}
